@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+*
+  outline: 0 !important
+
+*::-moz-focus-outer,
+*::-moz-focus-inner
+  border: 0
+  padding: 0
+
+html
+  box-sizing: border-box
+  font-family: $font
+  font-weight: 400
+
+body
+  font-family: $font
+  font-weight: 400
+  position: relative
+  scroll-behavior: smooth
+  font-size: 18px
+  padding: 0
+  margin: 0 auto
+  background: #FFF
+  max-width: 1920px
+  color: $color-black
+
+.wrapper
+  max-width: 1818px
+  margin: 0 auto
+
+h1
+  font-size: 64px
+  line-height: 100%
+
+h2
+  font-size: 48px
+  line-height: 125%
+  text-align: center
+  position: relative
+  margin: 98px 0 50px
+  &:before
+    content: ''
+    position: absolute
+    width: 20px
+    height: 50px
+    top: 50%
+    transform: translate(-20%, -50%)
+    background: $color-green
+    z-index: -1
+
+h3
+  font-size: 36px
+  line-height: 125%
+
+h4
+  font-size: 24px
+  line-height: 125%
+  text-transform: uppercase
+
+h5
+  font-size: 18px
+  line-height: 125%
+  text-transform: uppercase
+
+.regular
+  font-size: 16px
+  line-height: 150%
+
+.label
+  font-size: 14px
+  line-height: 120%
+
+.border-bot
+  border-bottom: 1px solid rgba($color-black, 0.6)
+
+.arrowup
+  position: fixed
+  left: 4%
+  bottom: 7%
+  width: 50px
+  height: 50px
+  background: $color-green
+  border-radius: 50px
+  .ico
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 30px
+    height: 30px
+    color: $color-white
+

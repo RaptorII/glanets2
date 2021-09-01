@@ -1,0 +1,49 @@
+{%
+    set items = [
+        {
+            img:'Rectangle 172.jpg',
+            title:'GRectangle 172.jpg',
+            head:'Меблі преміум класу',
+            txt: 'За 14 років на ринку меблів для дому ми стали надійними партнерами на ринку Вінницької області та України'
+        },
+        {
+            img:'Rectangle 169.jpg',
+            title:'Rectangle 169.jpg',
+            head: 'Надійність',
+            txt:'За 14 років на ринку меблів для дому ми стали надійними партнерами на ринку Вінницької області та України'
+        },
+        {
+            img:'Rectangle 170.jpg',
+            title:'Rectangle 170.jpg',
+            head: 'Безкоштовна доставка',
+            txt:'За 14 років на ринку меблів для дому ми стали надійними партнерами на ринку Вінницької області та України'
+        },
+        {
+            img:'Rectangle 172.jpg',
+            title:'Rectangle 172.jpg',
+            head:'Меблі преміум класу',
+            txt: 'За 14 років на ринку меблів для дому ми стали надійними партнерами на ринку Вінницької області та України'
+        }
+    ]
+%}
+
+<div class="wrapper">
+    <h2 class="animate animate-up">Наші переваги</h2>
+    <div class="slideradvantages animate animate-up">
+        {% for item in items %}
+        <div class="slideradvantages__box">
+            <div class="slideradvantages__img">
+                <img src="images/sliderAdvantages/{{ item.img }}" alt="{{ item.img }}">
+            </div>
+            <div class="slideradvantages__float">
+                <div class="slideradvantages__head">
+                    {{ item.head }}
+                </div>
+                <div class="slideradvantages__txt">
+                    {{ item.txt }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

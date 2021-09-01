@@ -1,0 +1,90 @@
+.header
+  display: flex
+  align-items: center
+  //align-content: space-between
+  justify-content: space-between
+  margin: 0
+  flex-direction: row
+  padding: 0
+  &__social,
+  &__phone,
+  &__contact
+    display: flex
+    align-items: center
+    &--name
+      display: flex
+      font-weight: bold
+      font-size: 18px
+      line-height: 125%
+    &--link
+      display: flex
+      padding-left: 20px
+      a
+        display: flex
+    .ico
+      color: $color-black
+      width: 22px
+      height: 22px
+  &__menu
+    padding-bottom: 13px
+  &__contact
+    margin-top: 0px
+    &--drop
+      display: flex
+      align-items: center
+      a
+        color: $color-black
+        font-size: 18px
+        line-height: 125%
+        text-transform: uppercase
+        font-weight: 700
+        text-decoration: none
+  &__product
+    margin-top: 17px
+    .menu
+      .navigation
+        > li+li
+          padding-left: 20px
+      .navigation__drop
+        a
+          padding: 20px 0
+  &__phone
+    margin-left: 60px
+    &--drop
+      margin-left: 5px
+      a
+        font-weight: bold
+        font-size: 18px
+        line-height: 125%
+        color: $color-black
+        text-decoration: none
+  &__logo
+    display: flex
+    align-items: center
+    margin: 17px 0 0 -195px
+    .ico
+      width: 125px
+      height: 70px
+    &--txt
+      font-weight: bold
+      font-size: 36px
+      line-height: 125%
+      margin-left: 15px
+  &__cart
+    display: flex
+    align-items: center
+    margin-top: 17px
+    .ico
+      width: 35px
+      height: 25px
+    &--txt
+      font-size: 18px
+      font-weight: 700
+      text-transform: uppercase
+      margin-right: 30px
+
+  .ico-drop
+    color: $color-black
+    width: 24px
+    height: 8px
+    margin-left: 6px

@@ -1,0 +1,77 @@
+<div class="wrapper" id="top">
+	<div class="header">
+		<div class="header__contact">
+			<div class="header__social">
+				<div class="header__social--name">
+					Ми в соціальних мережах:
+				</div>
+
+				<div class="header__social--link">
+					<a href="#">
+						<svg class="ico">
+							<use xlink:href="/svg/sprite.svg#telegram"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="header__social--link">
+					<a href="#">
+						<svg class="ico">
+							<use xlink:href="/svg/sprite.svg#facebook"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="header__social--link">
+					<a href="#">
+						<svg class="ico">
+							<use xlink:href="/svg/sprite.svg#instagram"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="header__phone">
+				<svg class="ico">
+					<use xlink:href="/svg/sprite.svg#mobile"></use>
+				</svg>
+				<div class="header__phone--drop">
+					<a href="#" class="h5">
+						(099) 111 22 33
+					</a>
+					<svg class="ico-drop">
+						<use xlink:href="/svg/sprite.svg#arrow-down"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="header__menu">
+			{% include "./nav.njk" %}
+		</div>
+
+	</div>
+</div>
+<div class="border-bot"></div>
+<div class="wrapper">
+	<div class="header">
+		<div class="header__product">
+			{% include "./nav_product.njk" %}
+		</div>
+		<div class="header__logo">
+			<svg class="ico">
+				<use xlink:href="/svg/sprite.svg#logo"></use>
+			</svg>
+			<div class="header__logo--txt">
+				<span style="color: #44C697">F</span>urniture.test
+			</div>
+		</div>
+		<div class="header__cart">
+			<svg class="ico">
+				<use xlink:href="/svg/sprite.svg#sh-cart"></use>
+			</svg>
+			<div class="header__cart--txt">
+				Кошик
+			</div>
+			<button class="btn-green">
+				Замовити дзвінок
+			</button>
+		</div>
+	</div>
+</div>

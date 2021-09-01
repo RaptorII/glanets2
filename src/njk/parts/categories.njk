@@ -1,0 +1,182 @@
+{%
+    set items = [
+        {
+            img:'Rectangle140.jpg',
+            title:'Rectangle140.jpg',
+            label:'Новинка',
+            name: 'Ліжко Рамона',
+            stok: '',
+            prise: '8 999 грн',
+            prisestok: ''
+        },
+        {
+            img:'Rectangle141.jpg',
+            title:'Rectangle141.jpg',
+            label:'Хіт продаж',
+            name: 'Ліжко Честер',
+            stok: 'акция',
+            prise: '8 999 грн',
+            prisestok: '8 999 грн'
+        },
+        {
+            img:'Rectangle142.jpg',
+            title:'Rectangle142.jpg',
+            label:'',
+            name: 'Ліжко Венеція люкс',
+            stok: '',
+            prise: '8 999 грн',
+            prisestok: ''
+        },
+        {
+            img:'Rectangle149.jpg',
+            title:'Rectangle149.jpg',
+            label:'Новинка',
+            name: 'Ліжко Імперія',
+            stok: '',
+            prise: '8 999 грн',
+            prisestok: ''
+        },
+        {
+            img:'Rectangle150.jpg',
+            title:'Rectangle150.jpg',
+            label:'',
+            name: 'Ліжко Адель',
+            stok: '',
+            prise: '8 999 грн',
+            prisestok: ''
+        },
+        {
+            img:'Rectangle151.jpg',
+            title:'Rectangle151.jpg',
+            label:'Новинка',
+            name: 'Ліжко Атлант',
+            stok: 'акция',
+            prise: '8 999 грн',
+            prisestok: '8 999 грн'
+        }
+    ]
+%}
+
+<div class="wrapper">
+    <h2 class="animate animate-up">Категорії товарів</h2>
+
+    <div class="tabs animate animate-up" >
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1" title="Диван">
+                <svg class="ico">
+                    <use xlink:href="/svg/sprite.svg#divan"></use>
+                </svg>
+                <span class="tab__name">
+                    Дивани
+                </span>
+            </label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2" title="Ліжко">
+                <svg class="ico">
+                    <use xlink:href="/svg/sprite.svg#ligko"></use>
+                </svg>
+                <span class="tab__name">
+                    Ліжка
+                </span>
+            </label>
+
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3" title="Крісло">
+                <svg class="ico">
+                    <use xlink:href="/svg/sprite.svg#krislo"></use>
+                </svg>
+                <span class="tab__name">
+                    Крісла
+                </span>
+            </label>
+
+            <input id="tab4" type="radio" name="tabs">
+            <label for="tab4" title="Комод">
+                <svg class="ico">
+                    <use xlink:href="/svg/sprite.svg#komod"></use>
+                </svg>
+                <span class="tab__name">
+                    Комоди
+                </span>
+            </label>
+
+            <input id="tab5" type="radio" name="tabs">
+            <label for="tab5" title="Шкаф">
+                <svg class="ico">
+                    <use xlink:href="/svg/sprite.svg#shkaf"></use>
+                </svg>
+                <span class="tab__name">
+                    Шафи
+                </span>
+            </label>
+
+            <input id="tab6" type="radio" name="tabs">
+            <label for="tab6" title="Кухня">
+                <svg class="ico">
+                    <use xlink:href="/svg/sprite.svg#kuhnya"></use>
+                </svg>
+                <span class="tab__name">
+                    Кухні
+                </span>
+            </label>
+
+        <div class="content" id="content-tab1">
+            <div class="box3x">
+                {% for item in items %}
+                    <div class="box3x__item">
+                        <div class="box3x__img">
+                            <img src="images/categories/{{ item.img }} " alt="{{ item.img }}">
+                        </div>
+                        {%  if item.label %}
+                        <div class="box3x__label">{{ item.label }}</div>
+                        {% endif %}
+                        {%  if item.stok %}
+                            <div class="box3x__stok">{{ item.stok }}</div>
+                        {% endif %}
+                        <div class="box3x__about">
+                            <div class="box3x__name">{{ item.name }}</div>
+                            {%  if item.prisestok %}
+                                <div class="box3x__prise-stok">{{ item.prisestok }}</div>
+                            {% endif %}
+                            <div class="box3x__prise {%  if item.prisestok %}is-through{% endif %}">{{ item.prise }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+        <div class="content" id="content-tab2">
+            <p>
+                Здесь размещаете любое содержание....2
+            </p>
+        </div>
+        <div class="content" id="content-tab3">
+            <p>
+                Здесь размещаете любое содержание....3
+            </p>
+        </div>
+        <div class="content" id="content-tab4">
+            <p>
+                Здесь размещаете любое содержание....4
+            </p>
+        </div>
+        <div class="content" id="content-tab5">
+            <p>
+                Здесь размещаете любое содержание....5
+            </p>
+        </div>
+        <div class="content" id="content-tab6">
+            <p>
+                Здесь размещаете любое содержание....6
+            </p>
+        </div>
+
+    </div>
+</div>
+<div class="wrapper categories">
+    <button class="btn-green">
+        В каталог
+    </button>
+</div>

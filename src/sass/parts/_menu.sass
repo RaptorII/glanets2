@@ -1,0 +1,149 @@
+.nav
+  display: flex
+  align-items: baseline
+  justify-content: space-between
+  margin-top: 4px
+
+.menu
+  width: 100%
+  .navigation
+    display: flex
+    position: relative
+    margin: 0
+    padding: 0
+    list-style: none
+    align-items: center
+    align-content: center
+    justify-content: space-around
+    > li
+      font-size: 24px
+      letter-spacing: 0
+      color: $color-black
+      font-family: $font
+      & + li
+        padding-left: 15px
+      //text-transform: uppercase
+      a
+        text-decoration: none
+        color: $color-black
+        transition: $trans-main
+        padding: 15px 0 5px 0
+        display: block
+        font-weight: bold
+        font-size: 18px
+        line-height: 125%
+        text-transform: uppercase
+        position: relative
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          width: 0
+          bottom: 0
+          height: 3px
+          left: 50%
+          background: $color-green
+          transition: $trans-main
+        &:hover
+          color: $color-black
+          &:before
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            bottom: 0
+            height: 3px
+            left: 0
+            background: $color-green
+        &.active
+          &:before
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            bottom: 0px
+            height: 3px
+            left: 0
+            background: $color-green
+    &__drop
+      display: flex
+      align-items: center
+      .ico-drop
+        color: $color-black
+        width: 12px
+        height: 6px
+        margin-left: 6px
+      &--list
+        position: relative
+        transition: $trans-main
+        width: 320px
+        padding: 5px
+        margin: 5px auto 5px auto
+        list-style: none
+        background: $color-white
+        border: 1px solid $color-black
+        box-sizing: border-box
+        border-radius: 10px
+        &:before
+          content: ''
+          position: absolute
+          z-index: 2
+          display: block
+          top: -6px
+          left: 20%
+          transform: translateX(-50%) rotate(45deg)
+          width: 10px
+          height: 10px
+          background: $color-white
+          border-top: 1px solid $color-black
+          border-left: 1px solid $color-black
+        li
+          padding: 0
+          margin: 0
+          a
+            padding: 5px 0
+
+@media screen and (min-width: 1200px)
+  .menu
+    .navigation
+      &__drop
+        &--list
+          opacity: 0
+          visibility: hidden
+          transition: $trans-main
+          position: absolute
+          top: 60px
+          //width: auto
+          padding: 15px
+          margin: 5px 5px 5px 0
+          list-style: none
+          background: $color-white
+          border: 1px solid $color-black
+          box-sizing: border-box
+          border-radius: 10px
+          &:before
+            content: ''
+            position: absolute
+            z-index: 2
+            display: block
+            top: -6px
+            left: 20%
+            transform: translateX(-50%) rotate(45deg)
+            width: 10px
+            height: 10px
+            background: $color-white
+            border-top: 1px solid $color-black
+            border-left: 1px solid $color-black
+          li
+            padding: 0
+            margin: 0
+            a
+              padding: 5px 0
+        &:hover
+          .navigation__drop--list
+            opacity: 1
+            visibility: visible
+            transition: $trans-main
+            top: 50px
+            position: absolute
+            z-index: 1

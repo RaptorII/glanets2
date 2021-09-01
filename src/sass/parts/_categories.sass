@@ -1,0 +1,196 @@
+.categories
+  .btn-green
+    margin: 52px auto
+    display: block
+
+.tabs
+  min-width: 320px
+  padding: 0
+  margin: 0 auto
+  display: flex
+  align-items: center
+  justify-content: space-around
+  flex-wrap: wrap
+  .tab__name
+    display: block
+    text-transform: uppercase
+    margin-top: 10px
+    font-size: 24px
+    line-height: 125%
+    transition: $trans-main
+    &:after
+      content: ''
+      display: block
+      width: 0%
+      position: absolute
+      height: 2px
+      background: $color-green
+  .ico
+    color: $color-black
+    width: 100px
+    height: 100px
+
+// Стили секций с содержанием */
+.tabs>.content
+  display: none
+  //padding: 15px
+  background: #fff
+
+.tabs>.content
+  margin: 0 0 5px
+  line-height: 1.5
+  color: #383838
+  animation-duration: 1s
+  animation-fill-mode: both
+  animation-name: fadeIn
+
+// Описываем анимацию свойства opacity */
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+// Прячем чекбоксы */
+.tabs>input
+  display: none
+  position: absolute
+
+// Стили переключателей вкладок (табов) */
+.tabs>label
+  margin: 0 0 30px 0px
+  padding: 5px 25px
+  font-weight: 600
+  text-align: center
+  border-radius: 3px 3px 0 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  flex: 1 1 16.6666%
+
+.tabs
+  .content
+    flex: 1 1 100%
+
+// Изменения стиля переключателей вкладок при наведении
+.tabs>label:hover
+  cursor: pointer
+
+// Стили для активной вкладки
+.tabs>input:checked+label
+  background: #fff
+  .ico
+    color: $color-green
+    width: 100px
+    height: 100px
+  .tab__name
+    position: relative
+    transition: $trans-main
+    &:after
+      content: ''
+      display: block
+      width: 100%
+      position: absolute
+      height: 2px
+      background: $color-green
+
+// Активация секций с помощью псевдокласса :checked
+#tab1:checked ~  #content-tab1,
+#tab2:checked ~  #content-tab2,
+#tab3:checked ~  #content-tab3,
+#tab4:checked ~  #content-tab4,
+#tab5:checked ~  #content-tab5,
+#tab6:checked ~  #content-tab6
+  display: block
+
+.box3x
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  &__item
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    flex: 1 1 33.33%
+    align-items: center
+    justify-content: space-around
+    max-width: 586px
+    margin-top: 50px
+    top: 0
+    transition: $trans-main
+    &:hover
+      background: $color-green
+      position: relative
+      top: -30px
+      transition: $trans-main
+      cursor: pointer
+      .box3x
+        &__stok,
+        &__name,
+        &__prise
+          color: $color-white
+          &.is-through
+            color: $color-white
+          &-stok
+            color: $color-white
+
+
+
+  &__about
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex: 1 0 auto
+    padding: 14px 15px
+
+  &__label
+    position: absolute
+    background: $color-black
+    color: $color-white
+    font-weight: 700
+    left: 0
+    top: 10px
+    padding: 5px 15px
+    font-size: 18px
+    line-height: 125%
+    text-transform: uppercase
+  &__stok
+    position: absolute
+    background: $color-red
+    color: $color-white
+    left: 0
+    top: 48px
+    padding: 4px 12px
+    font-size: 18px
+    font-weight: 700
+    line-height: 125%
+    text-transform: uppercase
+  &__name
+    font-weight: bold
+    font-size: 24px
+    line-height: 125%
+    text-transform: uppercase
+  &__prise
+    font-weight: bold
+    font-size: 24px
+    line-height: 125%
+    text-transform: uppercase
+    &.is-through
+      font-weight: bold
+      font-size: 18px
+      line-height: 125%
+      text-align: center
+      text-decoration-line: line-through
+      color: $color-grey
+    &-stok
+      font-weight: bold
+      font-size: 24px
+      line-height: 125%
+      text-transform: uppercase
+      color: $color-red
+      margin: 0 10px 0 auto
+  &__img
+    display: flex
+
